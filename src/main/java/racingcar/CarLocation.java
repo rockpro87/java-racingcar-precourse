@@ -3,7 +3,6 @@ package racingcar;
 public class CarLocation {
     private String text;
     private int number;
-    private static final int FORWARD_NUMBER = 1;
     private static final String FORWARD_TEXT = "-";
 
     public CarLocation() {
