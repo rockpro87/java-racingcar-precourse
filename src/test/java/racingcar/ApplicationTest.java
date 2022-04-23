@@ -44,6 +44,16 @@ class ApplicationTest extends NsTest {
         );
     }
 
+    @Test
+    void 최소_자동차_개수_예외_처리() {
+        assertSimpleTest(
+                () -> {
+                    runException("rock");
+                    assertThat(output()).contains(ERROR_MESSAGE);
+                }
+        );
+    }
+
     @Override
     public void runMain() {
         Application.main(new String[]{});
