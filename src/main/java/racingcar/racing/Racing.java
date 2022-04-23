@@ -1,4 +1,6 @@
-package racingcar;
+package racingcar.racing;
+
+import racingcar.car.Car;
 
 public class Racing {
     private final Entry entry;

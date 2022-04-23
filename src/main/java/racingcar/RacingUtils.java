@@ -1,6 +1,7 @@
 package racingcar;
 
 import org.assertj.core.util.Lists;
+import racingcar.car.CarName;
 
 import java.util.List;
 

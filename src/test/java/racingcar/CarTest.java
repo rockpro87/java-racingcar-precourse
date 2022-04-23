@@ -1,9 +1,10 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.test.NsTest;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import racingcar.car.Car;
+import racingcar.car.CarName;
 
 import static camp.nextstep.edu.missionutils.test.Assertions.assertRandomNumberInRangeTest;
 import static org.assertj.core.api.Assertions.assertThat;

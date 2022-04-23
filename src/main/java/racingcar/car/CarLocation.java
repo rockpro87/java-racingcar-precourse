@@ -1,4 +1,4 @@
-package racingcar;
+package racingcar.car;
 
 public class CarLocation {
     private String text;

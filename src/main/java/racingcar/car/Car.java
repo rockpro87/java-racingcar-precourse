@@ -1,7 +1,9 @@
-package racingcar;
+package racingcar.car;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import org.assertj.core.util.Lists;
+import racingcar.Move;
+import racingcar.RacingUtils;
 
 import java.util.List;
 
