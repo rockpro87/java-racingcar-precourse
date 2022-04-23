@@ -16,7 +16,7 @@ public class EntryTest {
 
     @Test
     void 자동차_레이싱_참가자_등록_검증() {
-        assertThat(entry.getEntryList().get(0).getName().getCarName()).isEqualTo("ray");
+        assertThat(entry.getEntryList().get(0).getName().toText()).isEqualTo("ray");
     }
 
     @Test
