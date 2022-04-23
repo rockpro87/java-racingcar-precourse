@@ -1,6 +1,7 @@
 package racingcar;
 
 import camp.nextstep.edu.missionutils.Console;
+import racingcar.car.CarName;
 import racingcar.racing.Entry;
 import racingcar.racing.Lap;
 import racingcar.racing.LapResults;
@@ -15,7 +16,7 @@ public class RacingView {
     public static Entry inputCarName() {
         try {
             System.out.println(INPUT_CAR_NAME);
-            return new Entry(RacingUtils.splitCarName(console()));
+            return new Entry(CarName.splitInputCarNames(console()));
         } catch (IllegalArgumentException ex) {
             System.out.println(ex.getMessage());
             return inputCarName();

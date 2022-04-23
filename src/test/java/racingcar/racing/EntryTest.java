@@ -2,7 +2,7 @@ package racingcar.racing;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import racingcar.RacingUtils;
+import racingcar.car.CarName;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -11,7 +11,7 @@ public class EntryTest {
 
     @BeforeEach
     void setup() {
-        entry = new Entry(RacingUtils.splitCarName("ray,k3,niro"));
+        entry = new Entry(CarName.splitInputCarNames("ray,k3,niro"));
     }
 
     @Test

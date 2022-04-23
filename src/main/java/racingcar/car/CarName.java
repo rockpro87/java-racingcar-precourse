@@ -1,5 +1,10 @@
 package racingcar.car;
 
+import org.assertj.core.util.Lists;
+import racingcar.Config;
+
+import java.util.List;
+
 import static racingcar.Config.*;
 
 public class CarName {
@@ -22,5 +27,13 @@ public class CarName {
 
     public String toText() {
         return carName;
+    }
+
+    public static List<CarName> splitInputCarNames(String input) {
+        List<CarName> carNames = Lists.newArrayList();
+        for (String carName : input.split(Config.CAR_NAME_DELIMITER)) {
+            carNames.add(new CarName(carName));
+        }
+        return carNames;
     }
 }

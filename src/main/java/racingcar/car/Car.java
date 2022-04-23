@@ -2,10 +2,10 @@ package racingcar.car;
 
 import camp.nextstep.edu.missionutils.Randoms;
 import org.assertj.core.util.Lists;
-import racingcar.Move;
-import racingcar.RacingUtils;
 
 import java.util.List;
+
+import static racingcar.Config.MOVE_BOUNDARY;
 
 public class Car {
     private final CarName name;
@@ -25,7 +25,7 @@ public class Car {
     }
 
     public void randomMove() {
-        if (RacingUtils.isGo(Randoms.pickNumberInRange(0, 9)).equals(Move.GO)) {
+        if (isGo(Randoms.pickNumberInRange(0, 9))) {
             this.location.moveForward();
         }
     }
@@ -36,5 +36,9 @@ public class Car {
             results.add(new Car(carName));
         }
         return results;
+    }
+
+    private boolean isGo(int value) {
+        return value > MOVE_BOUNDARY;
     }
 }

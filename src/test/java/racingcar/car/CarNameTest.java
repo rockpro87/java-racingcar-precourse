@@ -3,6 +3,7 @@ package racingcar.car;
 import org.junit.jupiter.api.Test;
 import racingcar.Config;
 
+import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 public class CarNameTest {
@@ -19,5 +20,12 @@ public class CarNameTest {
         assertThatThrownBy(() -> new CarName(""))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(Config.ERROR_CAR_NAME_EMPTY);
+    }
+
+    @Test
+    void 쉼표_기준_차량_이름_분리_기능_검증() {
+        String testInput = "k5,bongo,k3";
+        assertThat(CarName.splitInputCarNames(testInput).size()).isEqualTo(3);
+        assertThat(CarName.splitInputCarNames(testInput).get(0).toText()).isEqualTo("k5");
     }
 }

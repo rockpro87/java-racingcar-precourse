@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.test.NsTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import racingcar.Application;
-import racingcar.RacingUtils;
+import racingcar.car.CarName;
 
 import java.util.Arrays;
 
@@ -15,7 +15,7 @@ public class RacingTest extends NsTest {
     Racing racing;
     Lap lap;
     LapResults lapResults;
-    Entry entry = new Entry(RacingUtils.splitCarName("ray,k3,niro"));
+    Entry entry = new Entry(CarName.splitInputCarNames("ray,k3,niro"));
     private static final String LAP_COUNT = "3";
 
     @BeforeEach
