@@ -13,7 +13,7 @@ public class RacingUtils {
 
     public static List<CarName> splitCarName(String input) {
         List<CarName> carNames = Lists.newArrayList();
-        for (String carName : input.split(",")) {
+        for (String carName : input.split(Config.CAR_NAME_DELIMITER)) {
             carNames.add(new CarName(carName));
         }
         return carNames;

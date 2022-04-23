@@ -3,7 +3,6 @@ package racingcar;
 import racingcar.racing.Entry;
 import racingcar.racing.Lap;
 import racingcar.racing.Racing;
-import racingcar.racing.Winners;
 
 public class RacingController {
 
