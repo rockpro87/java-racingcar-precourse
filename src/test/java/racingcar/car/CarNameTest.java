@@ -13,4 +13,11 @@ public class CarNameTest {
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining(String.format(Config.ERROR_CAR_NAME_LENGTH, Config.CAR_NAME_MAX_LENGTH));
     }
+
+    @Test
+    void 자동차_이름이_빈값일_경우() {
+        assertThatThrownBy(() -> new CarName(""))
+                .isInstanceOf(IllegalArgumentException.class)
+                .hasMessageContaining(Config.ERROR_CAR_NAME_EMPTY);
+    }
 }
