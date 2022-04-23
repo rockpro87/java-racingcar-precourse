@@ -12,7 +12,7 @@ public class RacingController {
 
     private static void progress(Entry entry, Lap lap) {
         Racing racing = new Racing(entry);
-        for (int i = 0; i < lap.getCount(); i++ ) {
+        for (int i = 0; i < lap.getCount(); i++) {
             RacingView.printLapResult(racing.lapResult());
         }
         RacingController.result(racing);

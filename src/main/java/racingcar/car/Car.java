@@ -32,7 +32,7 @@ public class Car {
 
     public static List<Car> toList(List<CarName> carNames) {
         List<Car> results = Lists.newArrayList();
-        for(CarName carName : carNames ) {
+        for (CarName carName : carNames) {
             results.add(new Car(carName));
         }
         return results;

@@ -14,7 +14,7 @@ public class RacingUtilsTest {
     @Test
     void 쉼표_기준_차량_이름_분리_기능_검증() {
         String testInput = "k5,bongo,k3";
-        assertThat(RacingUtils.splitCarName(testInput ).size()).isEqualTo(3);
-        assertThat(RacingUtils.splitCarName(testInput ).get(0).toText()).isEqualTo("k5");
+        assertThat(RacingUtils.splitCarName(testInput).size()).isEqualTo(3);
+        assertThat(RacingUtils.splitCarName(testInput).get(0).toText()).isEqualTo("k5");
     }
 }

@@ -15,7 +15,7 @@ public class RacingTest extends NsTest {
     Racing racing;
     Lap lap;
     LapResults lapResults;
-    Entry entry =  new Entry(RacingUtils.splitCarName("ray,k3,niro"));
+    Entry entry = new Entry(RacingUtils.splitCarName("ray,k3,niro"));
     private static final String LAP_COUNT = "3";
 
     @BeforeEach

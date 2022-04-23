@@ -5,7 +5,7 @@ import static racingcar.Config.*;
 public class CarName {
     private final String carName;
 
-    public CarName (String name) {
+    public CarName(String name) {
         checkValidation(name.trim());
         this.carName = name.trim();
     }
