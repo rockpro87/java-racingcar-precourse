@@ -12,17 +12,17 @@ public class Entry {
     private final static int MIN_ENTRY_SIZE = 2;
 
     public Entry(List<CarName> carNames) {
-        this.cars = Car.toList(carNames);
-        checkValidation(this.cars);
+        this.cars = checkValidation(Car.toList(carNames));
     }
 
     public List<Car> getEntryList() {
         return this.cars;
     }
 
-    private void checkValidation(List<Car> cars) {
+    private List<Car> checkValidation(List<Car> cars) {
         if (cars.size() < MIN_ENTRY_SIZE) {
             throw new IllegalArgumentException(ENTRY_NOT_VALID_SIZE);
         }
+        return cars;
     }
 }

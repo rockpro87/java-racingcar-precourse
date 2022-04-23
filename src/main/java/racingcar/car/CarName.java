@@ -12,18 +12,17 @@ public class CarName {
     private static final int CAR_NAME_MAX_LENGTH = 5;
 
     public CarName(String name) {
-        checkValidation(name.trim());
-        this.carName = name.trim();
+        this.carName = checkValidation(name.trim());
     }
 
-    private void checkValidation(String name) {
+    private String checkValidation(String name) {
         if (name.length() > CAR_NAME_MAX_LENGTH) {
             throw new IllegalArgumentException(CAR_NAME_OVER_LENGTH + " 최대 " + CAR_NAME_MAX_LENGTH + "자.");
         }
-
         if (name.isEmpty()) {
             throw new IllegalArgumentException(CAR_NAME_EMPTY);
         }
+        return name;
     }
 
     public String toText() {
