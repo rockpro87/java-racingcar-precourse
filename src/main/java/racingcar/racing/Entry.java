@@ -8,8 +8,9 @@ import java.util.List;
 import static racingcar.ErrorMessage.ENTRY_NOT_VALID_SIZE;
 
 public class Entry {
-    private final List<Car> cars;
     private final static int MIN_ENTRY_SIZE = 2;
+
+    private final List<Car> cars;
 
     public Entry(List<CarName> carNames) {
         this.cars = checkValidation(Car.toList(carNames));

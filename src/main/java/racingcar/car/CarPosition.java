@@ -1,9 +1,10 @@
 package racingcar.car;
 
 public class CarPosition {
+    private static final String FORWARD_TEXT = "-";
+
     private String text;
     private int number;
-    private static final String FORWARD_TEXT = "-";
 
     public CarPosition() {
         this.number = 0;

@@ -6,9 +6,10 @@ import org.assertj.core.util.Lists;
 import java.util.List;
 
 public class Car {
+    private static final int MOVE_BOUNDARY = 3;
+
     private final CarName name;
     private final CarPosition position;
-    private static final int MOVE_BOUNDARY = 3;
 
     public Car(CarName name) {
         this.name = name;

@@ -8,9 +8,9 @@ import java.util.List;
 import java.util.TreeMap;
 
 public class Winners {
-    private final List<String> winners;
     private static final String JOIN_DELIMITER = ", ";
 
+    private final List<String> winners;
 
     public Winners(Entry entry) {
         this.winners = decisionWinner(entry);

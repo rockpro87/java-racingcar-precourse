@@ -3,8 +3,9 @@ package racingcar.racing;
 import static racingcar.ErrorMessage.LAP_COUNT_NOT_NUMBER;
 
 public class Lap {
-    private final int count;
     private static final String REGEX_LAP_INPUT = "[0-9]+";
+
+    private final int count;
 
     public Lap(String count) {
         this.count = checkValidation(count);

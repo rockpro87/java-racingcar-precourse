@@ -7,9 +7,10 @@ import java.util.List;
 import static racingcar.ErrorMessage.*;
 
 public class CarName {
-    private final String carName;
     private static final String CAR_NAME_DELIMITER = ",";
     private static final int CAR_NAME_MAX_LENGTH = 5;
+
+    private final String carName;
 
     public CarName(String name) {
         this.carName = checkValidation(name.trim());
