@@ -29,9 +29,9 @@ public class RacingTest extends NsTest {
         assertRandomNumberInRangeTest(
                 () -> {
                     progressLap(racing, lap);
-                    assertThat(entry.getEntryList().get(0).getLocation().toNumber()).isEqualTo(3);
-                    assertThat(entry.getEntryList().get(1).getLocation().toNumber()).isEqualTo(1);
-                    assertThat(entry.getEntryList().get(2).getLocation().toNumber()).isEqualTo(2);
+                    assertThat(entry.getEntryList().get(0).getPosition().toNumber()).isEqualTo(3);
+                    assertThat(entry.getEntryList().get(1).getPosition().toNumber()).isEqualTo(1);
+                    assertThat(entry.getEntryList().get(2).getPosition().toNumber()).isEqualTo(2);
                 },
                 4, 3, 3, 5, 2, 9, 6, 4, 9
         );

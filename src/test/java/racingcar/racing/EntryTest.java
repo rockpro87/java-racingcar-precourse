@@ -23,8 +23,8 @@ public class EntryTest {
 
     @Test
     void 자동차_레이싱_참가자_출발_위치_확인() {
-        assertThat(entry.getEntryList().get(0).getLocation().toResultText()).isEqualTo("");
-        assertThat(entry.getEntryList().get(0).getLocation().toNumber()).isEqualTo(0);
+        assertThat(entry.getEntryList().get(0).getPosition().toResultText()).isEqualTo("");
+        assertThat(entry.getEntryList().get(0).getPosition().toNumber()).isEqualTo(0);
     }
 
     @Test

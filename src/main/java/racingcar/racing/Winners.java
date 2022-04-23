@@ -26,11 +26,11 @@ public class Winners {
     }
 
     private void classifyRacingResult(Car car, TreeMap<Integer, String> resultMap) {
-        if (resultMap.containsKey(car.getLocation().toNumber())) {
-            resultMap.put(car.getLocation().toNumber(),
-                    String.join(DELIMITER, resultMap.get(car.getLocation().toNumber()), car.getName().toText()));
-        } else if (!resultMap.containsKey(car.getLocation().toNumber())) {
-            resultMap.put(car.getLocation().toNumber(), car.getName().toText());
+        if (resultMap.containsKey(car.getPosition().toNumber())) {
+            resultMap.put(car.getPosition().toNumber(),
+                    String.join(DELIMITER, resultMap.get(car.getPosition().toNumber()), car.getName().toText()));
+        } else if (!resultMap.containsKey(car.getPosition().toNumber())) {
+            resultMap.put(car.getPosition().toNumber(), car.getName().toText());
         }
     }
 

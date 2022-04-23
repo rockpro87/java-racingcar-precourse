@@ -23,7 +23,7 @@ public class CarTest extends NsTest {
                     car.randomMove();
                     car.randomMove();
                     car.randomMove();
-                    assertThat(car.getLocation().toNumber()).isEqualTo(2);
+                    assertThat(car.getPosition().toNumber()).isEqualTo(2);
                 },
                 4, 5, 1
         );
@@ -36,7 +36,7 @@ public class CarTest extends NsTest {
                     car.randomMove();
                     car.randomMove();
                     car.randomMove();
-                    assertThat(car.getLocation().toResultText()).isEqualTo("---");
+                    assertThat(car.getPosition().toResultText()).isEqualTo("---");
                 },
                 4, 5, 9, 1, 2
         );

@@ -7,25 +7,25 @@ import java.util.List;
 
 public class Car {
     private final CarName name;
-    private final CarLocation location;
+    private final CarPosition position;
     private static final int MOVE_BOUNDARY = 3;
 
     public Car(CarName name) {
         this.name = name;
-        this.location = new CarLocation();
+        this.position = new CarPosition();
     }
 
     public CarName getName() {
         return this.name;
     }
 
-    public CarLocation getLocation() {
-        return this.location;
+    public CarPosition getPosition() {
+        return this.position;
     }
 
     public void randomMove() {
         if (isGo(Randoms.pickNumberInRange(0, 9))) {
-            this.location.moveForward();
+            this.position.moveForward();
         }
     }
 

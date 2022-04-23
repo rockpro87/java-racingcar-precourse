@@ -11,7 +11,7 @@ public class LapResults {
     public LapResults(List<Car> cars) {
         HashMap<String, String> result = new HashMap<>();
         for (Car car : cars) {
-            result.put(car.getName().toText(), car.getLocation().toResultText());
+            result.put(car.getName().toText(), car.getPosition().toResultText());
         }
         this.lapResults = result;
     }

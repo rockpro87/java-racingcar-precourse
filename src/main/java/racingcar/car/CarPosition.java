@@ -1,11 +1,11 @@
 package racingcar.car;
 
-public class CarLocation {
+public class CarPosition {
     private String text;
     private int number;
     private static final String FORWARD_TEXT = "-";
 
-    public CarLocation() {
+    public CarPosition() {
         this.number = 0;
         this.text = "";
     }
