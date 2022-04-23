@@ -5,7 +5,7 @@ import racingcar.car.CarName;
 
 import java.util.List;
 
-import static racingcar.Config.ERROR_ENTRY_NOT_VALID_SIZE;
+import static racingcar.ErrorMessage.ENTRY_NOT_VALID_SIZE;
 
 public class Entry {
     private final List<Car> cars;
@@ -22,7 +22,7 @@ public class Entry {
 
     private void checkValidation(List<Car> cars) {
         if (cars.size() < MIN_ENTRY_SIZE) {
-            throw new IllegalArgumentException(ERROR_ENTRY_NOT_VALID_SIZE);
+            throw new IllegalArgumentException(ENTRY_NOT_VALID_SIZE);
         }
     }
 }

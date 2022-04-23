@@ -2,7 +2,7 @@ package racingcar.racing;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import racingcar.Config;
+import racingcar.ErrorMessage;
 import racingcar.car.CarName;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -31,6 +31,6 @@ public class EntryTest {
     void 참가_자동차가_최소_기준을_충족하지_못할_경우() {
         assertThatThrownBy(() -> new Entry(CarName.splitInputCarNames("ray")))
                 .isInstanceOf(IllegalArgumentException.class)
-                .hasMessageContaining(Config.ERROR_ENTRY_NOT_VALID_SIZE);
+                .hasMessageContaining(ErrorMessage.ENTRY_NOT_VALID_SIZE);
     }
 }

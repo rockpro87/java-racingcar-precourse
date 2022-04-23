@@ -1,11 +1,10 @@
 package racingcar.racing;
 
-import racingcar.Config;
-
-import static racingcar.Config.ERROR_LAP_COUNT_NOT_NUMBER;
+import static racingcar.ErrorMessage.LAP_COUNT_NOT_NUMBER;
 
 public class Lap {
     private final int count;
+    private static final String REGEX_LAP_INPUT = "[0-9]+";
 
     public Lap(String count) {
         checkValidation(count);
@@ -17,8 +16,8 @@ public class Lap {
     }
 
     private void checkValidation(String count) {
-        if (!count.matches(Config.REGEX_LAP_INPUT)) {
-            throw new IllegalArgumentException(ERROR_LAP_COUNT_NOT_NUMBER);
+        if (!count.matches(REGEX_LAP_INPUT)) {
+            throw new IllegalArgumentException(LAP_COUNT_NOT_NUMBER);
         }
     }
 }

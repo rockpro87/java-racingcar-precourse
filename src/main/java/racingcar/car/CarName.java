@@ -1,14 +1,15 @@
 package racingcar.car;
 
 import org.assertj.core.util.Lists;
-import racingcar.Config;
 
 import java.util.List;
 
-import static racingcar.Config.*;
+import static racingcar.ErrorMessage.*;
 
 public class CarName {
     private final String carName;
+    private static final String CAR_NAME_DELIMITER = ",";
+    private static final int CAR_NAME_MAX_LENGTH = 5;
 
     public CarName(String name) {
         checkValidation(name.trim());
@@ -17,11 +18,11 @@ public class CarName {
 
     private void checkValidation(String name) {
         if (name.length() > CAR_NAME_MAX_LENGTH) {
-            throw new IllegalArgumentException(String.format(ERROR_CAR_NAME_LENGTH, CAR_NAME_MAX_LENGTH));
+            throw new IllegalArgumentException(CAR_NAME_OVER_LENGTH + " 최대 " + CAR_NAME_MAX_LENGTH + "자.");
         }
 
         if (name.isEmpty()) {
-            throw new IllegalArgumentException(ERROR_CAR_NAME_EMPTY);
+            throw new IllegalArgumentException(CAR_NAME_EMPTY);
         }
     }
 
@@ -31,7 +32,7 @@ public class CarName {
 
     public static List<CarName> splitInputCarNames(String input) {
         List<CarName> carNames = Lists.newArrayList();
-        for (String carName : input.split(Config.CAR_NAME_DELIMITER)) {
+        for (String carName : input.split(CAR_NAME_DELIMITER)) {
             carNames.add(new CarName(carName));
         }
         return carNames;

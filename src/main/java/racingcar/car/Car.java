@@ -5,11 +5,10 @@ import org.assertj.core.util.Lists;
 
 import java.util.List;
 
-import static racingcar.Config.MOVE_BOUNDARY;
-
 public class Car {
     private final CarName name;
     private final CarLocation location;
+    private static final int MOVE_BOUNDARY = 3;
 
     public Car(CarName name) {
         this.name = name;
