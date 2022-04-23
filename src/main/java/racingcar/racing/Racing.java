@@ -13,4 +13,8 @@ public class Racing {
         entry.getEntryList().forEach((Car::randomMove));
         return new LapResults(entry.getEntryList());
     }
+
+    public Winners winners() {
+        return new Winners(this.entry);
+    }
 }
