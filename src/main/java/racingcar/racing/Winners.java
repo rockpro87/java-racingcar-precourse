@@ -10,13 +10,14 @@ import java.util.TreeMap;
 public class Winners {
     private final List<String> winners;
     private static final String DELIMITER = ",";
+    private static final String JOIN_DELIMITER = ", ";
 
 
     public Winners(Entry entry) {
         this.winners = decisionWinner(entry);
     }
 
-    public List<String> decisionWinner(Entry entry) {
+    private List<String> decisionWinner(Entry entry) {
         TreeMap<Integer, String> resultMap = new TreeMap<>(Comparator.reverseOrder());
         for (Car car : entry.getEntryList()) {
             classifyRacingResult(car, resultMap);
@@ -31,6 +32,10 @@ public class Winners {
         } else if (!resultMap.containsKey(car.getLocation().toNumber())) {
             resultMap.put(car.getLocation().toNumber(), car.getName().toText());
         }
+    }
+
+    public String toText() {
+        return String.join(JOIN_DELIMITER, winners);
     }
 
     public List<String> getWinners() {

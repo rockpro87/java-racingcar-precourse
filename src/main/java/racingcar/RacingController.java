@@ -3,6 +3,7 @@ package racingcar;
 import racingcar.racing.Entry;
 import racingcar.racing.Lap;
 import racingcar.racing.Racing;
+import racingcar.racing.Winners;
 
 public class RacingController {
 
@@ -15,5 +16,10 @@ public class RacingController {
         for (int i = 0; i < lap.getCount(); i++ ) {
             RacingView.printLapResult(racing.lapResult());
         }
+        RacingController.result(racing);
+    }
+
+    private static void result(Racing racing) {
+        RacingView.printWinners(racing.winners());
     }
 }
