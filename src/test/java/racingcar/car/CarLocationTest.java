@@ -1,8 +1,7 @@
-package racingcar;
+package racingcar.car;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import racingcar.car.CarLocation;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

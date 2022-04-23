@@ -1,9 +1,11 @@
 package racingcar;
 
+import static racingcar.Config.MOVE_BOUNDARY;
+
 public enum Move {
     STOP, GO;
 
     public static Move isGo(int value) {
-        return value > 3 ? Move.GO : Move.STOP;
+        return value > MOVE_BOUNDARY ? Move.GO : Move.STOP;
     }
 }

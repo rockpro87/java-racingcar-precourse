@@ -1,9 +1,10 @@
-package racingcar;
+package racingcar.racing;
 
 import camp.nextstep.edu.missionutils.test.NsTest;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import racingcar.racing.*;
+import racingcar.Application;
+import racingcar.RacingUtils;
 
 import java.util.Arrays;
 
@@ -15,7 +16,7 @@ public class RacingTest extends NsTest {
     Lap lap;
     LapResults lapResults;
     Entry entry =  new Entry(RacingUtils.splitCarName("ray,k3,niro"));
-    private static final int LAP_COUNT = 3;
+    private static final String LAP_COUNT = "3";
 
     @BeforeEach
     void setup() {
