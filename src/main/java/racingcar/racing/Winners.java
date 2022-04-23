@@ -1,15 +1,14 @@
 package racingcar.racing;
 
+import org.assertj.core.util.Lists;
 import racingcar.car.Car;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.TreeMap;
 
 public class Winners {
     private final List<String> winners;
-    private static final String DELIMITER = ",";
     private static final String JOIN_DELIMITER = ", ";
 
 
@@ -18,20 +17,22 @@ public class Winners {
     }
 
     private List<String> decisionWinner(Entry entry) {
-        TreeMap<Integer, String> resultMap = new TreeMap<>(Comparator.reverseOrder());
+        TreeMap<Integer, List<String>> resultMap = new TreeMap<>(Comparator.reverseOrder());
         for (Car car : entry.getEntryList()) {
             classifyRacingResult(car, resultMap);
         }
-        return Arrays.asList(resultMap.firstEntry().getValue().split(DELIMITER));
+        return resultMap.firstEntry().getValue();
     }
 
-    private void classifyRacingResult(Car car, TreeMap<Integer, String> resultMap) {
-        if (resultMap.containsKey(car.getPosition().toNumber())) {
-            resultMap.put(car.getPosition().toNumber(),
-                    String.join(DELIMITER, resultMap.get(car.getPosition().toNumber()), car.getName().toText()));
-        } else if (!resultMap.containsKey(car.getPosition().toNumber())) {
-            resultMap.put(car.getPosition().toNumber(), car.getName().toText());
+    private void classifyRacingResult(Car car, TreeMap<Integer, List<String>> resultMap) {
+        int carPosition = car.getPosition().toNumber();
+        String carName = car.getName().toText();
+
+        if (resultMap.containsKey(carPosition)) {
+            resultMap.get(carPosition).add(carName);
+            return;
         }
+        resultMap.put(carPosition, Lists.newArrayList(carName));
     }
 
     public String toText() {
